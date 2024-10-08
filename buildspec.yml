@@ -1,7 +1,15 @@
 version: 0.2
 
 phases:
-
+  install:
+    commands:
+      - echo Installing Docker...
+      - yum update -y
+      - amazon-linux-extras install docker
+      - service docker start
+      - docker --version
+      - echo Docker installed.
+  
   pre_build:
     commands:
       - echo Logging in to Amazon ECR...
