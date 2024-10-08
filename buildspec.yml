@@ -6,9 +6,10 @@ phases:
       - echo Installing Docker...
       - yum update -y
       - yum install -y docker
-      - service docker start
+      - echo Starting Docker...
+      - nohup dockerd &   # Start Docker daemon in background
       - docker --version
-
+      - echo Docker started.
   
   pre_build:
     commands:
