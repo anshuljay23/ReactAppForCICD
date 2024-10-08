@@ -1,0 +1,19 @@
+{
+    "family": "my-react-app",
+    "containerDefinitions": [
+      {
+        "name": "my-react-app-container",
+        "image": "<aws_account_id>.dkr.ecr.us-east-1.amazonaws.com/my-react-app:<IMAGE_TAG>",
+        "memory": 512,
+        "cpu": 256,
+        "portMappings": [
+          {
+            "containerPort": 90,
+            "hostPort": 90
+          }
+        ],
+        "essential": true
+      }
+    ]
+  }
+  
