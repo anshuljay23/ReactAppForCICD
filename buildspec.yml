@@ -7,7 +7,7 @@ phases:
       - yum update -y
       - yum install -y docker
       - echo Starting Docker...
-      - nohup dockerd &   # Start Docker daemon in background
+      - nohup dockerd &   # Start Docker daemon in the background
       - docker --version
       - echo Docker started.
   
